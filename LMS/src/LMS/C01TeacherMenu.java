@@ -11,7 +11,7 @@ class C01Teacher
 	String Email;
 	
 	@Override
-	public String toString() {return name+" "+TID+" "+Email+" "+Subject;}
+	public String toString() {return "이름: "+name+" \nID: "+TID+" \nEmail: "+Email+" \nSubject: "+Subject;}
 }
 
 public class C01TeacherMenu {
@@ -71,7 +71,9 @@ public class C01TeacherMenu {
 			
 			int size=Tchlist.size();
 			for(int i=0;i<size;i++) {
-				System.out.println(i+"."+Tchlist.get(i));
+				System.out.println((i+1)+"번 째");
+				System.out.println(Tchlist.get(i));
+				System.out.println();
 			}
 			break;
 		case 2:
@@ -104,6 +106,9 @@ public class C01TeacherMenu {
 		case 6:
 			//계정삭제
 			//해당 idx에 있는 정보 삭제 
+			System.out.print("어떤 계정을 삭제하겠습니까? ");
+			int n=sc.nextInt();
+			Tchlist.remove(n);
 			break;
 		case 7:
 			//종료
