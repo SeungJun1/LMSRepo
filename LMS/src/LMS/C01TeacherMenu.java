@@ -32,6 +32,7 @@ public class C01TeacherMenu {
 	Scanner sc = new Scanner(System.in);
 	int no;
 	
+	
 	void run() {
 		while(true)
 		{
@@ -46,6 +47,7 @@ public class C01TeacherMenu {
 		System.out.println("------------ 교수메뉴 -------------");
 		System.out.print("입력 :");
 		no = sc.nextInt();
+		
 		switch(no)
 		{
 		case 1:
@@ -53,7 +55,6 @@ public class C01TeacherMenu {
 			//C01Teacher객체 만들고 각멤버에 값 넣어서 
 			//(교수ID , 교수이름 , 교수과목, 이메일주소)
 			//ArrayList에 저장 
-			
 			for(int i=0;i<5;i++) {
 				pro=new C01Teacher();
 				System.out.println(i+1);
@@ -93,7 +94,7 @@ public class C01TeacherMenu {
 			//S안에 있는 내용 참고해서 idx에 있는 교수과목과 동일한
 			//과목을 듣는 학생리스트를 출력 
 //			for(int i=0;i<5;i++) {
-//				if(S.stu.Subject[i]==1) {
+				//if(S.stu.Subject[i]==Tchlist.get(i)) {
 //					System.out.println(S.stu.Subject[i]);
 //				}
 //			}
@@ -102,13 +103,32 @@ public class C01TeacherMenu {
 		case 5:
 			//정보변경
 			//해당 idx에 있는 정보 변경 
+			System.out.print("어디 정보를 변경하시겠습니까? ");
+			int n=sc.nextInt();
+			System.out.print("어떤 값을 수정하겠습니까?: ");
+			int c=sc.nextInt();
+			
+			int nsize=Tchlist.size();
+			for(int i=0;i<nsize;i++) {
+				System.out.println((i+1)+"번 째");
+				System.out.println(Tchlist.get(i));
+				System.out.println();
+			}
+			
 			break;
 		case 6:
 			//계정삭제
 			//해당 idx에 있는 정보 삭제 
 			System.out.print("어떤 계정을 삭제하겠습니까? ");
-			int n=sc.nextInt();
-			Tchlist.remove(n);
+			int m=sc.nextInt();
+			Tchlist.remove(m);
+			
+			int dsize=Tchlist.size();
+			for(int i=0;i<dsize;i++) {
+				System.out.println((i+1)+"번 째");
+				System.out.println(Tchlist.get(i));
+				System.out.println();
+			}
 			break;
 		case 7:
 			//종료
