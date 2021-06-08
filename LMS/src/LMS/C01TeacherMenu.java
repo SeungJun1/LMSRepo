@@ -25,7 +25,7 @@ public class C01TeacherMenu {
 		this.S=stu;
 	}
 	
-	ArrayList<C01Teacher> Tchlist = new ArrayList();
+	public static ArrayList<C01Teacher> Tchlist = new ArrayList();
 	int Curidx;	// 현재 로그인한 교수 Idx 저장
 	C01Teacher pro;
 	
@@ -80,9 +80,20 @@ public class C01TeacherMenu {
 		case 2:
 			//로그인
 			//ArrayList에 해당 TId가 있는 idx를 CurIdx에 저장
-			System.out.print("로그인할 ID를 입력하세요: ");
-			String login=sc.nextLine();
-			System.out.println();
+			System.out.print("ID 입력: ");
+			String ID=sc.nextLine();
+			boolean flag=false;
+			for(int i=0;i<Tchlist.size();i++) {
+				if(ID.equals(Tchlist.get(i).name)) {
+					Curidx=i;
+					flag=true;
+					break;
+				}
+				if(flag==true)
+					System.out.println("로그인 성공");
+				else
+					System.out.println("로그인 실패");
+			}
 			break;
 		case 3:
 			//로그아웃

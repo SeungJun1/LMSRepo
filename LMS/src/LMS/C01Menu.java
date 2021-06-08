@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class C01Menu {
 
 	public static void main(String[] args) {
-		C01TeacherMenu T = new C01TeacherMenu();
+		C01TeacherMenu T = new C01TeacherMenu(null);
 		C01StudentMenu S = new C01StudentMenu();
 		C01AdminMenu A = new C01AdminMenu();
 		Scanner sc = new Scanner(System.in);
