@@ -92,8 +92,8 @@ public class C01StudentMenu {
 			String sub=sc.nextLine();
 			for(int i=0;i<C01TeacherMenu.Tchlist.size();i++) {
 				if(sub.equals(C01TeacherMenu.Tchlist.get(i).Subject)) {
-					int size=Stdlist.get(Curidx).Subject.length;
-					Stdlist.get(Curidx).Subject[size]=sub;
+					//int size=Stdlist.get(Curidx).Subject.length;
+					//Stdlist.get(Curidx).Subject[size]=sub;
 					System.out.println("수강신청완료");
 				}
 				else
