@@ -13,7 +13,20 @@ class LectureRoom
 public class C01AdminMenu {
 	
 	//강의실 룸정보 저장(교수메뉴/학생메뉴에도 볼수있도록 static 표시)
-	public static ArrayList<LectureRoom> RoomList = new ArrayList();
+	int room[][]= 
+		{
+				{101,102,103},
+				{201,202,203},
+				{301,302,303}
+		};
+	//public static ArrayList<LectureRoom> RoomList = new ArrayList();
+	public  LectureRoom List[][] = new LectureRoom[3][3];
+	
+	for(int i=0;i<List.length;i++) {
+		for(int j=0;j<List[i].length;j++) {
+			List[i][j]=new LectureRoom();
+		}
+	}
 	//학생정보,교수정보 확인용
 	C01StudentMenu S;
 	C01TeacherMenu T;
@@ -21,21 +34,24 @@ public class C01AdminMenu {
 	//생성자를 이용해서 Menu에 있는 학생메뉴객체주소와
 	//교수메뉴객체주소를 각각 멤버변수에 삽입합니다
 	
+	
+
 	Scanner sc = new Scanner(System.in);
 	int no=0;
 	void run() {
 		while(true)
 		{
 		System.out.println("------------ Admin메뉴 -------------");
-		System.out.println("1.가입교수 리스트");
-		System.out.println("2.가입학생 리스트");
-		System.out.println("3.가능강의 리스트");
-		System.out.println("4.수강학생 리스트");
-		System.out.println("5.강의실 리스트");
-		System.out.println("6.강의실 배정");
-		System.out.println("7.교수 계정삭제");
-		System.out.println("8.학생 계정삭제");
-		System.out.println("9.종료");
+		System.out.println("1.관리자 로그인");
+		System.out.println("2.가입교수 리스트");
+		System.out.println("3.가입학생 리스트");
+		System.out.println("4.가능강의 리스트");
+		System.out.println("5.수강학생 리스트");
+		System.out.println("6.강의실 리스트");
+		System.out.println("7.강의실 배정");
+		System.out.println("8.교수 계정삭제");
+		System.out.println("9.학생 계정삭제");
+		System.out.println("10.종료");
 		System.out.println("------------ Admin메뉴 -------------");
 		System.out.print("입력 :");
 		no = sc.nextInt();

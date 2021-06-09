@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class C01Menu {
 
 	public static void main(String[] args) {
-		C01TeacherMenu T = new C01TeacherMenu(null);
+		C01TeacherMenu T = new C01TeacherMenu();
 		C01StudentMenu S = new C01StudentMenu();
 		C01AdminMenu A = new C01AdminMenu();
 		Scanner sc = new Scanner(System.in);
 		boolean flag = false;
 		int no=0;
+		
+		T.SetS(S);
+		
 		while(true)
 		{
 		System.out.println("------------ L  M  S -------------");
