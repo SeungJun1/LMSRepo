@@ -14,7 +14,7 @@ class C01Student
 
 public class C01StudentMenu {
 	
-	ArrayList<C01Student> Stdlist = new ArrayList();
+	public static ArrayList<C01Student> Stdlist = new ArrayList();
 	int Curidx;	// 현재 로그인한 학생 idx 저장  
 	
 	C01TeacherMenu T;
